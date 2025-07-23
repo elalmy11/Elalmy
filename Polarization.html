@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>اقتباسات العالمي</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #00ff00;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .quote {
+      background-color: #1e1e1e;
+      border: 1px solid #00ff00;
+      padding: 15px;
+      margin: 15px auto;
+      width: 80%;
+      border-radius: 10px;
+      font-size: 1.2em;
+      position: relative;
+    }
+
+    .copy-btn {
+      margin-top: 10px;
+      background-color: #00ff00;
+      color: #121212;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .copy-msg {
+      color: #0f0;
+      font-size: 0.9em;
+      margin-top: 5px;
+      display: none;
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌟 اقتباسات العالمي 🌟</h1>
+
+  <div class="quote">
+    "لا تفكر في المضي بل فكر ف الحاضر"
+    <br>
+    <button class="copy-btn" onclick="copyQuote(this)">نسخ الاقتباس</button>
+    <div class="copy-msg">✅ تم النسخ!</div>
+  </div>
+
+  <div class="quote">
+    "لا تنتظر الفرصة، اصنعها بيدك."
+    <br>
+    <button class="copy-btn" onclick="copyQuote(this)">نسخ الاقتباس</button>
+    <div class="copy-msg">✅ تم النسخ!</div>
+  </div>
+
+  <div class="quote">
+    "الصبر مفتاح الفرج، والنية الطيبة طريق للنجاح."
+    <br>
+    <button class="copy-btn" onclick="copyQuote(this)">نسخ الاقتباس</button>
+    <div class="copy-msg">✅ تم النسخ!</div>
+  </div>
+
+  <div class="footer">جميع الحقوق محفوظة © العالمي</div>
+
+  <script>
+    function copyQuote(btn) {
+      const quoteText = btn.parentElement.firstChild.textContent.trim();
+      navigator.clipboard.writeText(quoteText).then(() => {
+        const msg = btn.nextElementSibling;
+        msg.style.display = 'block';
+        setTimeout(() => {
+          msg.style.display = 'none';
+        }, 1500);
+      });
+    }
+  </script>
+
+</body>
+</html>

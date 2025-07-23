@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>أكواد البرمجة - العالني ووزير الشباب</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    pre {
+      background-color: #111;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      position: relative;
+    }
+    button.copy-btn {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #222;
+      color: #90ee90;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    h2 {
+      border-bottom: 1px solid #90ee90;
+      padding-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>مكتبة أكواد العالمي ووزير الشباب</h1>
+
+  <section>
+    <h2>🐍 أكواد بايثون</h2>
+    <pre><button class="copy-btn" onclick="copyCode(this)">نسخ</button><code>print("أهلاً بك في موقع العالني")</code></pre>
+    <pre><button class="copy-btn" onclick="copyCode(this)">نسخ</button><code>age = 18
+if age >= 18:
+    print("أنت بالغ")
+else:
+    print("أنت لسه صغير")</code></pre>
+  </section>
+
+  <section>
+    <h2>🌐 أكواد HTML</h2>
+    <pre><button class="copy-btn" onclick="copyCode(this)">نسخ</button><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;مثال HTML&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;أهلاً بك&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+    <pre><button class="copy-btn" onclick="copyCode(this)">نسخ</button><code>&lt;form&gt;
+  &lt;label&gt;اسمك:&lt;/label&gt;
+  &lt;input type="text" name="name"&gt;
+  &lt;button type="submit"&gt;إرسال&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+  </section>
+
+  <section>
+    <h2>🎨 أكواد CSS</h2>
+    <pre><button class="copy-btn" onclick="copyCode(this)">نسخ</button><code>body {
+  background-color: black;
+  color: lightgreen;
+}</code></pre>
+    <pre><button class="copy-btn" onclick="copyCode(this)">نسخ</button><code>button:hover {
+  background-color: green;
+  color: white;
+}</code></pre>
+  </section>
+
+  <section>
+    <h2>⚡ أكواد JavaScript</h2>
+    <pre><button class="copy-btn" onclick="copyCode(this)">نسخ</button><code>alert("مرحباً بك في العالني ووزير الشباب!");</code></pre>
+    <pre><button class="copy-btn" onclick="copyCode(this)">نسخ</button><code>document.querySelector("button").addEventListener("click", function() {
+  alert("تم الضغط على الزر");
+});</code></pre>
+  </section>
+
+  <script>
+    function copyCode(button) {
+      const code = button.nextElementSibling.innerText;
+      navigator.clipboard.writeText(code).then(() => {
+        button.innerText = '✅ تم النسخ';
+        setTimeout(() => { button.innerText = 'نسخ'; }, 1500);
+      });
+    }
+  </script>
+</body>
+</html>
